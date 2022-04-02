@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Tajawal');
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	background: #373B44;
+	background: -webkit-linear-gradient(to top, #f49242, #28b894);
+	background: linear-gradient(to top, #f49242, #28b894);
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Tajawal', sans-serif;
+}
+
+.slider-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 500px;
+	width: 100vw;
+	perspective: 1000px;
+	position: relative;
+    transform-style: preserve-3d;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	width: 20%;
+	height: 400px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(20% - 20px);
+	z-index: 1000;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.slide .content {
+	background-color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+	margin-top: 200px;
+	height: 200px;
+}
+
+.slide.slide-1 {
+	transform-origin: right;
+	transform: scale(0.95) rotateY(-20deg);
+	left: 1.5% !important;
+	z-index: 1;
+	opacity: 1;
+}
+
+.slide.slide-2 {
+	transform-origin: right;
+	transform: rotateY(-10deg);
+	left: 20% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-3 {
+	left: 40% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-4 {
+	transform-origin: left;
+	transform: rotateY(10deg);
+	left: 60% !important;
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide.slide-5 {
+	transform-origin: left;
+	transform: scale(0.95) rotateY(20deg);
+	margin-left: 0;
+	left: 78.5% !important;
+	z-index: 1;
+	opacity: 1;
+}
+
+h2 {
+	margin: -40px 0 0;
+}
+
+img.circle {
+	object-fit: cover;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	transform: translateY(calc(-50% - 10px));
+}
+
+.buttons-container {
+	position: absolute;
+	bottom: 0;
+}
+
+.arrow {
+	background: transparent;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	cursor: pointer;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	margin: 30px 20px 0;
+	transition:all 0.5s;
+}
+.arrow:hover{
+	background:#28b894;
+}
